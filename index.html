@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+     
+    <div class="icon">
+        <i class="fa-solid fa-bars "></i>
+</div>
+<div class="sidebar">
+    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+    <h2>My Code</h2>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Contact</li>
+    </ul>
+</div>
+</div>
+
+<script>
+    var navbtn = document.querySelector(".icon")
+    var sidebar = document.querySelector(".sidebar")
+    var close = document.querySelector(".close")
+    sidebar.style.left = "-250px"
+    
+    navbtn.addEventListener('click',()=>{
+        if(sidebar.style.left == "-250px"){
+            close.style.transform = "rotate(360deg)"
+      sidebar.style.left = "0px"
+    }else{
+        close.style.transform = "rotate(0deg)"
+      sidebar.style.left = "-250px"
+    }   
+
+    })
+    close.addEventListener('click' ,()=>{
+        sidebar.style.left = "-250px"
+        close.style.transform = "rotate(0deg)"
+    })
+   
+    </script>
+</body>
